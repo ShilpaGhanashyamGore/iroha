@@ -1066,7 +1066,6 @@ class SetAccountDetailTest : public CommandValidateExecuteTest {
  public:
   void SetUp() override {
     CommandValidateExecuteTest::SetUp();
-    
     cmd = std::make_shared<SetAccountDetail>();
     cmd->account_id = admin_id;
     cmd->key = "key";
@@ -1074,8 +1073,6 @@ class SetAccountDetailTest : public CommandValidateExecuteTest {
     command = cmd;
     role_permissions = {can_set_quorum};
   }
-
-  std::vector<pubkey_t> account_pubkeys;
   std::shared_ptr<SetAccountDetail> cmd;
 };
 
